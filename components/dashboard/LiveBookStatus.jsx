@@ -1,6 +1,5 @@
 "use client";
 
-import { useMemo } from "react";
 import { Card, CardContent, Stack, Typography } from "@mui/material";
 import {
   Search as SearchIcon,
@@ -37,38 +36,39 @@ const bookData = [
 ];
 
 export default function LiveBookStatus() {
-  const bookColumns = useMemo(
-    () => [
-      {
-        field: "_id",
-        headerName: "No",
-        flex: 1,
-      },
-      {
-        field: "bookNo",
-        headerName: "Book No",
-        flex: 1,
-      },
-      {
-        field: "owner",
-        headerName: "Owner",
-        flex: 1,
-      },
-      {
-        field: "status",
-        headerName: "Status",
-        flex: 1,
-        renderCell: ({ value }) => <StatusLabel status={value} />,
-      },
-      {
-        field: "price",
-        headerName: "Price",
-        flex: 1,
-        type: "number",
-      },
-    ],
-    []
-  );
+  const bookColumns = [
+    {
+      field: "_id",
+      headerName: "No",
+      flex: 0,
+    },
+    {
+      field: "bookNo",
+      headerName: "Book No",
+      flex: 1,
+    },
+    {
+      field: "owner",
+      headerName: "Owner",
+      flex: 1,
+    },
+    {
+      field: "status",
+      headerName: "Status",
+      flex: 1,
+      renderCell: ({ value }) => (
+        <Stack my={1.5}>
+          <StatusLabel status={value} />
+        </Stack>
+      ),
+    },
+    {
+      field: "price",
+      headerName: "Price",
+      flex: 1,
+      type: "number",
+    },
+  ];
 
   return (
     <Card variant="outlined" sx={{ my: 4, minWidth: "100%" }}>

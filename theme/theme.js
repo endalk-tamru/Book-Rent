@@ -13,6 +13,9 @@ export const getDesignTokens = (mode) => ({
     secondary: {
       main: "#171b36",
     },
+    success: {
+      main: "#4BCDC4",
+    },
     error: {
       main: "#FF0060",
     },

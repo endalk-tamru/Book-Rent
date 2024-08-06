@@ -9,13 +9,18 @@ const statusTags = {
     color: "#000000",
     bgColor: "#FF6B6B",
   },
+  IN_ACTIVE: {
+    label: "Inactive",
+    color: "#000000",
+    bgColor: "#FF6B6B",
+  },
   PENDING: {
     label: "Pending",
     color: "#000000",
     bgColor: "#ff9800",
   },
-  VERIFIED: {
-    label: "Verified",
+  ACTIVE: {
+    label: "Active",
     color: "#000000",
     bgColor: "#4BCDC4",
   },

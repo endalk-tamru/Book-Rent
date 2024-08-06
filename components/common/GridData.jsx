@@ -22,7 +22,7 @@ export default function GridData({ rows, columns, ...rest }) {
         columns={columns}
         getRowId={(row) => row._id}
         slots={{
-          // toolbar: QuickSearchToolbar,
+          // toolbar: QuickSearchToolbar/,
           loadingOverlay: LinearProgress,
         }}
         initialState={{

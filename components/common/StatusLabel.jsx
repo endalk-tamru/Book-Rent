@@ -16,6 +16,7 @@ export default function StatusLabel({ status }) {
       component="div"
       sx={{
         fontSize: 14,
+        minWidth: 70,
         color:
           Object.values(statusTags)?.find((obj) => obj?.label === status)
             ?.bgColor ?? "default",
